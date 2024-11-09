@@ -353,7 +353,7 @@ h1 {
 }
 
 #tech-stack {
-  padding: 40px 20px;
+  padding: 120px 20px; /* Increased top padding from 40px to 120px */
   background-color: #0D0D0D;
   color: #ffffe3;
   text-align: center;
