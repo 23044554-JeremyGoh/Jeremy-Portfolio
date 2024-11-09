@@ -1,23 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const text = "Hey there! Welcome to my portfolio! ";
-    const typewriterElement = document.getElementById("typewriter");
-    const emojiElement = document.querySelector(".wave-emoji");
-    let index = 0;
-
-    function type() {
-        if (index < text.length) {
-            typewriterElement.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, 75); // Faster typing speed (75ms instead of 100ms)
-        } else {
-            // Once typing is done, add the waving class to the emoji
-            emojiElement.classList.add("waving-emoji");
-        }
-    }
-
-    type();
-});
-
 // Preloader script
 const greetings = [
     "Hello",
@@ -57,3 +37,28 @@ function showNextGreeting() {
 }
 
 window.addEventListener('load', showNextGreeting);
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const text = "Hey there! Welcome to my portfolio! ";
+    const typewriterElement = document.getElementById("typewriter");
+    const emojiElement = document.querySelector(".wave-emoji");
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typewriterElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 75); // Faster typing speed (75ms instead of 100ms)
+        } else {
+            // Once typing is done, add the waving class to the emoji
+            emojiElement.classList.add("waving-emoji");
+        }
+    }
+
+    type();
+});
+
