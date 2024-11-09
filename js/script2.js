@@ -3,9 +3,7 @@ const greetings = [
     "👋 Hello",
     "👋 你好", 
     "👋 Selemat Datang",
-    "👋 안녕하세요",
-    "👋 Ciao",
-    "👋 Olá",
+    "👋 வணக்கம்",
 ];
 
 const preloader = document.querySelector('.preloader');
@@ -23,19 +21,18 @@ function showNextGreeting() {
         
         currentIndex = (currentIndex + 1) % greetings.length;
         
-        if (currentIndex < greetings.length - 1) {
-            setTimeout(showNextGreeting, 500); // Reduced from 800ms to 500ms
+        if (currentIndex !== 0) {
+            setTimeout(showNextGreeting, 500);
         } else {
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                    // Start typewriter effect after preloader is hidden
                     startTypewriter();
-                }, 200); // Reduced from 300ms to 200ms
-            }, 500); // Reduced from 800ms to 500ms
+                }, 200);
+            }, 500);
         }
-    }, 200); // Reduced from 300ms to 200ms
+    }, 200);
 }
 
 // Move typewriter code into a separate function
