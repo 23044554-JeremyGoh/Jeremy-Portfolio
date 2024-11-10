@@ -831,3 +831,36 @@ h1 {
         margin-left: 95px;
     }
 }
+
+/* Add a specific media query for smaller laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #tech-stack h2,
+  #portfolio h2 {
+    font-size: 36px;
+    margin-right: 0;
+    text-align: left;
+    margin-left: 95px;
+  }
+
+  #tech-stack h2 {
+    font-size: 36px;
+    margin-right: 0;
+    text-align: left;
+    margin-left: 95px;  /* Changed back to 95px to match original */
+  }
+
+  .tech-stack {
+    margin-left: 95px;  /* Changed back to 95px to match original */
+    margin-right: 95px;
+    justify-content: center;  /* Changed to center to match original */
+    gap: 2rem;  /* Added explicit gap */
+  }
+
+  .skill-card {
+    width: calc(19.5% - 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+  }
+}
