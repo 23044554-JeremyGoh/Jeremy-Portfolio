@@ -802,32 +802,73 @@ h1 {
     }
 }
 
-/* Large screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1366px) {
     .about-info {
-        width: 80%;
+        width: 75%;
     }
 
     .tech-stack {
-        margin-left: 70px;
+        margin-left: 80px;
     }
 
     .toggleContainer {
-        margin-right: 200px;
+        width: 75%;
+        margin-right: 150px;
     }
 
     .content-section {
-        margin-right: 200px;
+        width: 75%;
+        margin-right: 150px;
+    }
+
+    .skill-card {
+        width: calc(20% - 20px);
     }
 }
 
-/* Extra large screens */
-@media (min-width: 1201px) {
+/* Desktops */
+@media (min-width: 1367px) and (max-width: 1920px) {
     .about-info {
         width: 70%;
     }
 
     .tech-stack {
         margin-left: 95px;
+    }
+
+    .toggleContainer {
+        width: 70%;
+        margin-right: 200px;
+    }
+
+    .content-section {
+        width: 70%;
+        margin-right: 200px;
+    }
+
+    .skill-card {
+        width: calc(16.66% - 20px);
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1921px) {
+    .about-info {
+        width: 60%;
+    }
+
+    .tech-stack {
+        margin-left: 120px;
+    }
+
+    .toggleContainer {
+        width: 60%;
+        margin-right: 250px;
+    }
+
+    .content-section {
+        width: 60%;
+        margin-right: 250px;
     }
 }
