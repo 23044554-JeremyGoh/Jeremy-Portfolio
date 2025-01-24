@@ -881,7 +881,7 @@ nav a {
      margin-left: 20px !important;
   }
   #portfolio .vertical-title{
-    margin-left: 20px !important;
+    margin-left: 40px !important;
  }
   #tech-stack .tech-subheading{
     margin-left: 20px !important;
@@ -964,10 +964,7 @@ nav a {
     transition: color 0.3s ease;
   }
 
-  .uli li a:hover {
-    color: #007bff; /* Hover color */
-  }
-
+  
   /* Hamburger Menu */
   .hamburger {
     display: none; /* Hidden by default */
