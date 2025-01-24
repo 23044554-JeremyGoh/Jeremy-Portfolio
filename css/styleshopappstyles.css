@@ -56,6 +56,7 @@ h1 {
 }
 
 .back-button {
+  text-decoration: none;
   position: absolute;
   top: 20px; /* Adjusts vertical spacing */
   left: 20px; /* Adjusts horizontal spacing */
