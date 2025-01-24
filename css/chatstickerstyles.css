@@ -210,89 +210,27 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
 }
-/* General Media Queries */
-@media (max-width: 1024px) {
-  /* Adjust font sizes for medium screens */
-  h1 {
-    font-size: 3rem; /* Slightly smaller heading */
-  }
 
-  .section h2 {
-    font-size: 1.125rem; /* Reduce subheading size */
-  }
-
-  .section p {
-    font-size: 0.95rem; /* Adjust paragraph text size */
-  }
-
-  .container {
-    max-width: 700px; /* Slightly narrower container */
-    padding: 0.75rem;
-  }
+@media (max-width: 1300px) {
   body {
-    height: 170vh; /* Adjust height for medium screens */
+    height: 300vh; /* Increase height for medium-large screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    height: 200vh; /* Increase height for tablets or smaller laptops */
   }
 }
 
 @media (max-width: 768px) {
-  /* Adjust for tablets and smaller devices */
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .section h2 {
-    font-size: 1rem;
-  }
-
-  .section p {
-    font-size: 0.9rem;
-  }
-
-  .gallery {
-    gap: 15px; /* Reduce spacing between grid items */
-  }
-
-  .gallery img {
-    height: 250px; /* Reduce image height */
-  }
-
-  .modal-content {
-    max-width: 90%;
-    max-height: 90%; /* Expand modal content slightly */
+  body {
+    height: 220vh; /* Increase height for small tablets or large phones */
   }
 }
 
-@media (max-width: 480px) {
-  /* Adjust for mobile devices */
-  h1 {
-    font-size: 2rem;
-    text-align: center; /* Center-align heading on small screens */
-  }
-
-  .section {
-    text-align: center; /* Center-align text content */
-  }
-
-  .container {
-    max-width: 90%; /* Use more screen space */
-    padding: 0.5rem;
-  }
-
-  .gallery {
-    gap: 10px; /* Minimize gaps further for small screens */
-  }
-
-  .gallery img {
-    height: 200px; /* Reduce image height further */
-  }
-
-  .modal-arrow {
-    font-size: 1.5rem; /* Reduce arrow size */
-    padding: 0.25rem 0.5rem;
-  }
-
-  .caption {
-    font-size: 0.875rem; /* Smaller caption text */
+@media (max-width: 416px) {
+  body {
+    height: 240vh; /* Increase height for small phones */
   }
 }
-

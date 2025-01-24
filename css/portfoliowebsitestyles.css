@@ -213,3 +213,27 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 1300px) {
+  body {
+    height: 180vh; /* Increase height for medium-large screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    height: 200vh; /* Increase height for tablets or smaller laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 220vh; /* Increase height for small tablets or large phones */
+  }
+}
+
+@media (max-width: 416px) {
+  body {
+    height: 240vh; /* Increase height for small phones */
+  }
+}
