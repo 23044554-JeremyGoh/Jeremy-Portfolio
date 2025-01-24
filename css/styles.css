@@ -770,7 +770,7 @@ nav a {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 200px;
 }
 
 .form-group {
@@ -782,11 +782,12 @@ nav a {
 .form-group textarea {
   padding: 12px;
   border: 1px solid #e4ded7;
-  border-radius: 4px;
+  border-radius: 8px;
   background: transparent;
   color: #e4ded7;
   font-size: 1rem;
   font-family: inherit;
+  gap: 20px;
 }
 
 .form-group textarea {
@@ -808,6 +809,7 @@ nav a {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s;
+  border-radius: 8px;
 }
 
 .submit-btn:hover {
@@ -961,6 +963,7 @@ nav a {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    text-transform: none;
   }
 
   .uli {
