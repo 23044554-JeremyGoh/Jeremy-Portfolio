@@ -213,7 +213,7 @@ button:hover {
 
 @media (max-width: 1300px) {
   body {
-    height: 300vh; /* Increase height for medium-large screens */
+    height: 290vh; /* Increase height for medium-large screens */
   }
 }
 
