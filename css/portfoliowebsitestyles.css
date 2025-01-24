@@ -57,13 +57,14 @@ h1 {
 }
 
 .back-button {
+  text-decoration: none;
   position: absolute;
   top: 20px; /* Adjusts vertical spacing */
   left: 20px; /* Adjusts horizontal spacing */
   font-size: 18px;
   color: #e4ded7;
   font-family: inherit;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
   border: none;
   background: none;
