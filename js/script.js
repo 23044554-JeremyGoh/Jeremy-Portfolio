@@ -95,6 +95,8 @@ const projectDescriptions = {
     "A recipe manager app that calculates the total cooking time",
     "Cat Breed Finder App":
     "A cat breed finder App that allows users to search for and explore a variety of cat breeds",
+    "StyleShop App":
+    "An e-commerce ui design app",
 };
 
 projectItems.forEach((item) => {

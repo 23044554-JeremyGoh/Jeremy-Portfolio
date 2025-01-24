@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Stickers</title>
+    <link rel="stylesheet" href="css/chatstickerstyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Suranna&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chat Stickers Design</h1>
+      <button class="back-button" onclick="window.location.href='/index.html#portfolio'">BACK</button>
+      <div class="section">
+        <div class="description">
+          <h2>Purpose of this creative work</h2>
+          <p>
+            I've to design a set of original chat stickers (5 stickers) that
+            reflects myself or my business for my graded assignment.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="description">
+          <h2>Design Rationale</h2>
+          <p>
+            The concept for my six stickers revolves around an otter who is also
+            a football player. Each sticker showcases a unique expression or
+            scenario, brought to life with a comic art-inspired starburst effect
+            background.<br /><br />
+            The first sticker features the otter waving hello with its hand
+            raised. In the second sticker, the otter appears sad, with tears
+            streaming down its cheeks and its hands covering its face. For these
+            two stickers, I used a "Desert Sand" color (#D6BFAE) to represent
+            its home kit, much like how football teams have designated home and
+            away kits.<br /><br />
+
+            The third sticker captures the otter in a thoughtful pose, pointing
+            a finger to its cheek in a gun-like gesture. Meanwhile, the fourth
+            sticker depicts the otter in a state of shock, with wide, white
+            eyes. For these two stickers, I opted for a "French Gray" color
+            (#B7C4CE) to signify its away kit.<br /><br />
+
+            Finally, the sixth sticker showcases the otter as a referee, angrily
+            holding up a red card. This completes the series, with each sticker
+            embodying a distinct personality and role within the football theme.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="technologies">
+          <h2>Technologies Used</h2>
+          <div class="skills-container">
+            <div class="skill-item">Illustrator</div>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Final Artworks</h2>
+        <div class="gallery">
+          <img
+            src="img/chatstickersketch.png"
+            alt="Front Name Card"
+            data-caption="Concept Sketches"
+          />
+          <img
+            src="img/chatstickermoodboard.png"
+            alt="Back Name Card"
+            data-caption="Moodboard"
+          />
+          <img
+            src="img/otter.png"
+            alt="Front Name Card"
+            data-caption="Otter Saying Hello! 👋"
+          />
+          <img
+            src="img/otter2.png"
+            alt="Back Name Card"
+            data-caption="Otter Apologizing 😭"
+          />
+          <img
+            src="img/otter3.png"
+            alt="Back Name Card"
+            data-caption="Otter Thinking 🤔"
+          />
+          <img
+            src="img/otter4.png"
+            alt="Back Name Card"
+            data-caption="Otter Shocked 😲"
+          />
+          <img
+            src="img/otter5.png"
+            alt="Back Name Card"
+            data-caption="Referee Otter Angry 😡"
+          />
+        </div>
+        <div class="modal" id="imageModal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <button class="modal-arrow left-arrow" onclick="navigateModal(-1)">
+            &#10094;
+          </button>
+          <img class="modal-content" id="modalImage" alt="Expanded Image" />
+          <div class="caption" id="modalCaption"></div>
+          <button class="modal-arrow right-arrow" onclick="navigateModal(1)">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/namecardslider.js"></script>
+  </body>
+</html>

@@ -11,11 +11,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh; /* Full viewport height */
+  height: 130vh; /* Full viewport height */
   font-family: "Figtree", serif;
   line-height: 1.6;
   color: #A3A3A3;
-  text-transform: lowercase;
+  text-transform: lowercase
 }
 
 /* Main Container */
@@ -25,49 +25,6 @@ body {
   text-align: left; /* Ensure the text is left-aligned */
 }
 
-
-
-button {
-  position: absolute;
-  top: 20px; /* Adjusts vertical spacing */
-  left: 20px; /* Adjusts horizontal spacing */
-  font-size: 18px;
-  color: #e4ded7;
-  font-family: inherit;
-  font-weight: 800;
-  cursor: pointer;
-  border: none;
-  background: none;
-  text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
-}
-
-button:focus,
-button:hover {
-  color: #fff;
-}
-
-button:focus:after,
-button:hover:after {
-  width: 100%;
-  left: 0%;
-}
-
-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
-}
 /* Title Styling */
 h1 {
   font-size: 2.5rem;
@@ -98,7 +55,47 @@ h1 {
   line-height: 1.6;
 }
 
+.back-button {
+  position: absolute;
+  top: 20px; /* Adjusts vertical spacing */
+  left: 20px; /* Adjusts horizontal spacing */
+  font-size: 18px;
+  color: #e4ded7;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
 
+.back-button:focus,
+button:hover {
+  color: #fff;
+}
+
+.back-button:focus:after,
+.back-button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.back-button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
 
 .skills-container {
@@ -210,113 +207,4 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
-}
-
-
-/* For screens smaller than 1300px */
-@media (max-width: 1300px) {
-  .container {
-    max-width: 90%; /* Expand container width */
-  }
-
-  h1 {
-    font-size: 2.2rem; /* Adjust title size */
-  }
-
-  .section h2 {
-    font-size: 1.1rem; /* Adjust section title size */
-  }
-
-  .gallery img {
-    height: 180px; /* Adjust gallery image height */
-  }
-}
-
-/* For screens smaller than 1024px (tablets in landscape) */
-@media (max-width: 1024px) {
-  body {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
-
-  .container {
-    padding: 1rem; /* Slightly reduce padding */
-  }
-
-  h1 {
-    font-size: 2rem; /* Slightly smaller title */
-  }
-
-  .section h2 {
-    font-size: 1rem; /* Smaller section title size */
-  }
-
-  button {
-    font-size: 16px; /* Smaller button text size */
-  }
-
-  .gallery img {
-    height: 160px; /* Smaller gallery images */
-  }
-}
-
-/* For screens smaller than 768px (tablets in portrait) */
-@media (max-width: 768px) {
-  body {
-    font-size: 0.85rem; /* Further reduce font size */
-  }
-
-  .container {
-    padding: 0.8rem; /* Reduce padding for compact layout */
-  }
-
-  h1 {
-    font-size: 1.8rem; /* Adjust title size */
-  }
-
-  .section h2 {
-    font-size: 0.9rem; /* Adjust section title */
-  }
-
-  .gallery {
-    grid-template-columns: 1fr; /* Single-column grid */
-    gap: 10px; /* Reduce gap between images */
-  }
-
-  .gallery img {
-    height: 150px; /* Reduce image height */
-  }
-}
-
-/* For screens smaller than 416px (mobile devices) */
-@media (max-width: 416px) {
-  body {
-    font-size: 0.8rem; /* Further adjust font size for mobile */
-    height: auto; /* Ensure proper scrolling */
-  }
-
-  .container {
-    padding: 0.5rem; /* Minimal padding for small screens */
-  }
-
-  h1 {
-    font-size: 1.5rem; /* Compact title */
-  }
-
-  .section h2 {
-    font-size: 0.85rem; /* Smaller section title */
-  }
-
-  .section p {
-    font-size: 0.75rem; /* Reduce paragraph text */
-  }
-
-  button {
-    font-size: 14px; /* Smaller button text */
-    top: 10px;
-    left: 10px; /* Adjust button placement */
-  }
-
-  .gallery img {
-    height: 120px; /* Reduce image height further */
-  }
 }

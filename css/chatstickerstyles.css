@@ -15,6 +15,7 @@ body {
   font-family: "Figtree", serif;
   line-height: 1.6;
   color: #A3A3A3;
+  text-transform: lowercase;
 }
 
 /* Main Container */
@@ -49,8 +50,50 @@ h1 {
   font-style: italic;
 }
 .section p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px; /* Adjusts vertical spacing */
+  left: 20px; /* Adjusts horizontal spacing */
+  font-size: 18px;
+  color: #e4ded7;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.back-button:focus,
+button:hover {
+  color: #fff;
+}
+
+.back-button:focus:after,
+.back-button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.back-button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 
