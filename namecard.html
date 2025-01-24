@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Card Design</title>
+    <link rel="stylesheet" href="css/namecardstyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Suranna&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Name Card Design</h1>
+
+
+      <div class="section">
+        <div class="description">
+          <h2>Design Purpose</h2>
+          <p>
+           To design an original business card for my graded assignment.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="description">
+          <h2>Design Rationale</h2>
+          <p>
+            The concept that I’ve chosen for my namecard would be a retro theme.
+            Firstly, for the front of the namecard, I designed a logo that
+            embodies the retro aesthetic, complemented by a starburst effect
+            background. This combination aims to capture the vibrant and
+            nostalgic feel of the retro era. For the back of the namecard, I've
+            chosen a retro-inspired typography to match my concept, such as
+            making my fonts look 3D.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="section">
+        <div class="technologies">
+          <h2>Technologies Used</h2>
+          <div class="skills-container">
+            <div class="skill-item">Illustrator</div>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Final Artworks</h2>
+        <div class="gallery">
+          <img
+            src="img/namecardconceptsketch.png"
+            alt="Front Name Card"
+            data-caption="Concept Sketches"
+          />
+          <img
+            src="img/namecardmoodboard.png"
+            alt="Back Name Card"
+            data-caption="Moodboard"
+          />
+          <img
+            src="img/frontnamecard.png"
+            alt="Front Name Card"
+            data-caption="Front Namecard"
+          />
+          <img
+            src="img/backnamecard.png"
+            alt="Back Name Card"
+            data-caption="Back Namecard"
+          />
+        </div>
+        <div class="modal" id="imageModal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <button class="modal-arrow left-arrow" onclick="navigateModal(-1)">
+            &#10094;
+          </button>
+          <img class="modal-content" id="modalImage" alt="Expanded Image" />
+          <div class="caption" id="modalCaption"></div>
+          <button class="modal-arrow right-arrow" onclick="navigateModal(1)">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/namecardslider.js"></script>
+  </body>
+</html>

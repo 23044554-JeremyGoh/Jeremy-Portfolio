@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website Design</title>
+    <link rel="stylesheet" href="css/portfoliowebsitestyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Suranna&display=swap"
+    rel="stylesheet"
+  />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Portfolio Website Design</h1>
+
+      <div class="section">
+        <div class="description">
+          <h2>Design Purpose</h2>
+          <p>
+            To design a portfolio website with 4 tabs: Home, Portfolio,
+            About, Contact & have at least 6 pieces of work to display on my
+            portfolio page for my graded assignment
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="description">
+          <h2>Design Rationale</h2>
+          <p>
+            My goal is to create a cohesive retro-inspired experience that
+            balances aesthetics with functionality. <br> <br>The homepage establishes the
+            theme through "computer window" designs, pixelated fonts, and grain
+            textures, setting a nostalgic tone. <br> <br>The portfolio page adapts this
+            layout into a structured grid for showcasing work, complemented by a
+            consistent "VIEW MORE" button.   <br><br>The about page highlights skills
+            using traced icons paired with text for clarity and visual appeal.
+            <br> <br>Finally, the contact page blends retro aesthetics with usability
+            through rounded rectangles and clear input placeholders. This
+            unified design reflects my style and ensures an engaging user
+            experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="technologies">
+          <h2>Technologies Used</h2>
+          <div class="skills-container">
+            <div class="skill-item">Illustrator</div>
+        </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Final Artworks</h2>
+        <div class="gallery">
+          <img
+            src="img/portfoliowebsitesketch.png"
+            alt="Front Name Card"
+            data-caption="Concept Sketches"
+          />
+          <img
+            src="img/portfoliowebsitemoodboard.png"
+            alt="Back Name Card"
+            data-caption="Moodboard"
+          />
+          <img
+            src="img/portfoliowebsite.png"
+            alt="Front Name Card"
+            data-caption="Home Page"
+          />
+          <img
+            src="img/portfoliowebsite2.png"
+            alt="Back Name Card"
+            data-caption="Portfolio Page"
+          />
+          <img
+            src="img/portfoliowebsite3.png"
+            alt="Back Name Card"
+            data-caption="About Page"
+          />
+          <img
+            src="img/portfoliowebsite4.png"
+            alt="Back Name Card"
+            data-caption="Contact Page"
+          />
+        </div>
+        <div class="modal" id="imageModal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <button class="modal-arrow left-arrow" onclick="navigateModal(-1)">
+            &#10094;
+          </button>
+          <img class="modal-content" id="modalImage" alt="Expanded Image" />
+          <div class="caption" id="modalCaption"></div>
+          <button class="modal-arrow right-arrow" onclick="navigateModal(1)">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/namecardslider.js"></script>
+  </body>
+</html>
