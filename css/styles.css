@@ -252,6 +252,7 @@ section {
   line-height: 1;
   font-family: "Figtree", sans-serif;
   margin-left: -20px;
+  text-transform: none;
 }
 
 
@@ -747,8 +748,8 @@ nav a {
 }
 
 .contact-item i {
-  font-size: 24px;
-  color: #e4ded7;
+  font-size: 14px;
+  color: #A3A3A3;
 }
 
 .contact-item h3 {
@@ -758,13 +759,13 @@ nav a {
 }
 
 .contact-item a {
-  color: #e4ded7;
+  color: #A3A3A3;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact-item a:hover {
-  color: #ccc;
+  color: #ffffff;
 }
 
 .contact-form {
@@ -776,6 +777,7 @@ nav a {
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .form-group input,
