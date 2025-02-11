@@ -4,6 +4,7 @@ const greetings = ["👋 Hello", "👋 你好", "👋 Selemat Datang", "👋 வ
 const preloader = document.querySelector(".preloader");
 const preloaderText = document.querySelector(".preloader-text");
 let currentIndex = 0;
+let totalGreetings = greetings.length; // Track total greetings
 
 // Function to show the next greeting
 function showNextGreeting() {
@@ -18,16 +19,16 @@ function showNextGreeting() {
     preloaderText.classList.add("fade-in");
 
     // Move to the next greeting
-    currentIndex = (currentIndex + 1) % greetings.length;
+    currentIndex++;
 
-    // If not the last greeting, continue the sequence
-    if (currentIndex !== 0) {
-      setTimeout(showNextGreeting, 500);
+    // If we haven't reached the total greetings, continue the sequence
+    if (currentIndex < totalGreetings) {
+      setTimeout(showNextGreeting, 1000); // Delay before the next change
     } else {
-      // Once all greetings are displayed, fade out preloader
-      fadeOutPreloader();
+      // Ensure the last greeting stays visible before preloader fades out
+      setTimeout(fadeOutPreloader, 1500); 
     }
-  }, 200); // Short delay between greetings
+  }, 500); // Delay between fade-out and text change
 }
 
 // Function to fade out and hide the preloader
@@ -71,6 +72,7 @@ window.addEventListener("load", () => {
     showNextGreeting();
   }
 });
+
 
 const projectItems = document.querySelectorAll(".project-item");
 const imagePreview = document.getElementById("image-preview");
