@@ -1,10 +1,10 @@
 // Preloader script
-const greetings = ["👋 Hello", "👋 你好", "👋 Selemat Datang", "👋 வணக்கம்"];
+const greetings = ["👋 Hello", "👋 你好", "👋 Selamat Datang", "👋 வணக்கம்"];
 
 const preloader = document.querySelector(".preloader");
 const preloaderText = document.querySelector(".preloader-text");
 let currentIndex = 0;
-let totalGreetings = greetings.length; // Track total greetings
+let totalGreetings = greetings.length;
 
 // Function to show the next greeting
 function showNextGreeting() {
@@ -23,12 +23,12 @@ function showNextGreeting() {
 
     // If we haven't reached the total greetings, continue the sequence
     if (currentIndex < totalGreetings) {
-      setTimeout(showNextGreeting, 1000); // Delay before the next change
+      setTimeout(showNextGreeting, 300); // Faster transition
     } else {
-      // Ensure the last greeting stays visible before preloader fades out
-      setTimeout(fadeOutPreloader, 1500); 
+      // Ensure the last greeting stays visible briefly before preloader fades out
+      setTimeout(fadeOutPreloader, 600); 
     }
-  }, 500); // Delay between fade-out and text change
+  }, 150); // Shorter fade-out time
 }
 
 // Function to fade out and hide the preloader
@@ -41,11 +41,11 @@ function fadeOutPreloader() {
 
     // Initialize AOS after the preloader disappears
     AOS.init({
-      duration: 1200, // Duration for animations
-      once: true, // Ensure animations are triggered only once
+      duration: 800, // Faster animations
+      once: true, 
     });
-    AOS.refresh(); // Recalculate the positions and triggers for AOS
-  }, 500); // Wait for the fade-out transition to complete
+    AOS.refresh(); 
+  }, 300); // Faster preloader disappearance
 }
 
 // Check if the preloader should be skipped
@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
 
     // Initialize AOS immediately
     AOS.init({
-      duration: 1200,
+      duration: 800, // Faster animations
       once: true,
     });
     AOS.refresh();
