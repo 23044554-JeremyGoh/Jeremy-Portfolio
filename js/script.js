@@ -84,7 +84,7 @@ const projectDescriptions = {
   "Chat Stickers Design":
     "A chat stickers design that i did for my graded assignment.",
   "Portfolio Website Design":
-    "A portfolio website that i did for my graded assignment.",
+    "A portfolio website design that i did for my graded assignment.",
   "Grocery App UI":
     "A Grocery App UI",
    "Football Apparel App":
@@ -99,6 +99,8 @@ const projectDescriptions = {
     "A cat breed finder App that allows users to search for and explore a variety of cat breeds",
     "StyleShop App":
     "An e-commerce ui design app",
+    "Travel List App":
+    "A travel list app done using react",
 };
 
 projectItems.forEach((item) => {
