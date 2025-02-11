@@ -17,10 +17,10 @@
       rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Suranna&display=swap"
-    rel="stylesheet"
-  />
-  
+      href="https://fonts.googleapis.com/css2?family=Suranna&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
@@ -59,8 +59,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    
-   
+
     <section id="home" data-aos="fade-up">
       <div class="hero">
         <div class="container">
@@ -72,7 +71,11 @@
             <h2 class="home-tagline" data-aos="fade-up" data-aos-delay="900">
               Fullstack Developer
             </h2>
-            <div class="socialmedia-icons" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="socialmedia-icons"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <ul class="example-2">
                 <li class="icon-content">
                   <a
@@ -179,10 +182,13 @@
           </div>
 
           <p>
-            i’m a second-year Digital Design and Development student passionate
-            about graphic design and coding. I’m also a football enthusiast,
-            motivated by teamwork and dedication. My ultimate goal is to become
-            a skilled full-stack developer.
+            Hey, I'm Jeremy! I'm a second-year Digital Design and Development
+            student with a passion for both graphic design and coding. I thrive
+            on creativity and problem-solving, always looking for ways to blend
+            aesthetics with functionality.<br><br> Beyond tech, I'm a football
+            enthusiast who values teamwork and dedication. My ultimate goal is
+            to become a skilled full-stack developer, crafting seamless and
+            impactful digital experiences.
           </p>
         </div>
         <div class="profile-photo-container">
@@ -329,7 +335,7 @@
         </a>
         <hr class="divider" />
       </div>
-        
+
       <div class="project-item hidden" data-category="app-development">
         <a href="footballapp.html" class="project-content">
           <div class="project-info">
@@ -350,9 +356,7 @@
         </a>
         <hr class="divider" />
       </div>
-      
-        
-      </div>
+
       <div class="project-item hidden" data-category="app-development">
         <a href="recipemangerapp.html" class="project-content">
           <div class="project-info">
@@ -386,7 +390,7 @@
       <button id="view-more-button">Show More</button>
     </section>
     <div id="image-preview"></div>
-    
+
     <section id="contact" data-aos="fade-up">
       <div class="vertical-title">
         <div class="line"></div>
@@ -402,56 +406,70 @@
           <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
             <i class="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/jeremyygohh/" target="_blank">jeremyygohh</a>
+            <a href="https://www.linkedin.com/in/jeremyygohh/" target="_blank"
+              >jeremyygohh</a
+            >
           </div>
           <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
             <i class="fab fa-github"></i>
             <h3>GitHub</h3>
-            <a href="https://github.com/23044554-JeremyGoh/" target="_blank">23044554-JeremyGoh</a>
+            <a href="https://github.com/23044554-JeremyGoh/" target="_blank"
+              >23044554-JeremyGoh</a
+            >
           </div>
         </div>
         <div class="contact-form" data-aos="fade-left">
-          <form action="https://formsubmit.co/jingquan1999@gmail.com" method="POST">
-            
+          <form
+            action="https://formsubmit.co/jingquan1999@gmail.com"
+            method="POST"
+          >
             <div class="form-group">
               <input type="text" name="name" placeholder="Your Name" required />
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
             </div>
             <div class="form-group">
-              <textarea name="message" placeholder="Your Message" required></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
             </div>
-            
-            <input type="hidden" name="_next" value="https://23044554-jeremygoh.github.io/Jeremy-Portfolio/#contact" />
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://23044554-jeremygoh.github.io/Jeremy-Portfolio/#contact"
+            />
             <input type="hidden" name="_captcha" value="false" />
             <button type="submit" class="submit-btn">Send Message</button>
           </form>
         </div>
       </div>
     </section>
-    
-    
-    
-    
-    
-        <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
     <script></script>
     <script>
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
-  
+
       hamburger.addEventListener("click", () => {
         // Toggle the 'open' class on the mobile menu
         mobileMenu.classList.toggle("open");
-  
+
         // Add animation for hamburger menu
         const spans = hamburger.querySelectorAll("span");
         spans[0].classList.toggle("top");
         spans[1].classList.toggle("middle");
         spans[2].classList.toggle("bottom");
       });
-      
     </script>
   </body>
 </html>
