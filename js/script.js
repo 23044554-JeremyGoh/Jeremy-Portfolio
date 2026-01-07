@@ -1,161 +1,172 @@
-// --- 1. INITIAL SETUP & LIBRARIES ---
-gsap.registerPlugin(ScrollTrigger);
-
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-});
-
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
-
-// --- 2. PRELOADER LOGIC (PRESERVED) ---
-// Note: I modified the sequence slightly to account for the new structure,
-// but the words and timing logic remain.
-
-const greetings = ["• Hello", "• Hallå", "• नमस्ते"];
+// Preloader script
+const greetings = ["• Hello", "• Bonjour", "• Ciao", "• Ola", "• やあ", "• Hallå", "• مرحباً", "• Guten Tag", "• Hallo"];
 const preloader = document.querySelector(".preloader");
 const preloaderText = document.querySelector(".preloader-text");
 
 function playPreloaderAnimation() {
-    let index = 0;
-    preloaderText.textContent = greetings[0];
-    
-    // Fade In
-    requestAnimationFrame(() => preloaderText.classList.add("fade-in"));
+  let index = 0;
 
-    // Wait 1.2s for first word
-    setTimeout(() => {
-        // Fast forward effect
-        const interval = setInterval(() => {
-            index++;
-            if (index < greetings.length) {
-                preloaderText.textContent = greetings[index];
-            } else {
-                clearInterval(interval);
-                slideUpPreloader();
-            }
-        }, 150);
-    }, 1200);
+  // 1. Show the first greeting immediately
+  preloaderText.textContent = greetings[0];
+  
+  // Fade it in
+  requestAnimationFrame(() => {
+    preloaderText.classList.add("fade-in");
+  });
+
+  // 2. Wait for the first word to sit there (1.2 seconds)
+  setTimeout(() => {
+    
+    // 3. Start the "Fast Forward" effect
+    // We update the text every 150ms without fading out
+    const interval = setInterval(() => {
+      index++;
+
+      // If we have greetings left to show
+      if (index < greetings.length) {
+        preloaderText.textContent = greetings[index];
+      } else {
+        // Stop the cycle and slide up
+        clearInterval(interval);
+        slideUpPreloader();
+      }
+    }, 150); // Speed of the fast forward (lower number = faster)
+
+  }, 1200); // Duration the first "Hello" stays visible
 }
 
 function slideUpPreloader() {
-    preloader.classList.add("slide-up");
-    
-    // Trigger Landing Animations after preloader moves
-    setTimeout(() => {
-        initLandingAnimations();
-    }, 600);
-}
+  preloader.classList.add("slide-up");
 
-// Check Load State
-window.addEventListener("load", () => {
-    if(window.location.hash === "#portfolio") {
-        preloader.style.display = "none";
-        initLandingAnimations();
-    } else {
-        playPreloaderAnimation();
+  // Initialize AOS
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ duration: 800, once: true });
+      AOS.refresh();
     }
-});
+  }, 200);
 
-
-// --- 3. ANIMATIONS ---
-
-function initLandingAnimations() {
-    // Hero Text Stagger
-    gsap.from(".hero-line", {
-        y: 100,
-        opacity: 0,
-        duration: 1.5,
-        stagger: 0.2,
-        ease: "power4.out"
-    });
+  // Remove from display after animation
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 900);
 }
 
-// Text Reveal on Scroll (About Section)
-const textElements = document.querySelectorAll(".reveal-text");
-textElements.forEach(text => {
-    // Split text logic would go here for letter-by-letter, 
-    // but for simplicity we use opacity scrub
-    gsap.to(text, {
-        backgroundPositionX: "0%",
-        stagger: 1,
-        scrollTrigger: {
-            trigger: text,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: true,
-            // We use a CSS gradient hack for the text reveal color change
-            onEnter: () => text.style.color = "#fff" 
-        }
-    });
+// Initial Load Logic
+window.addEventListener("load", () => {
+  const urlHash = window.location.hash;
+
+  if (urlHash === "#portfolio") {
+    preloader.style.display = "none";
+    const portfolioSection = document.querySelector("#portfolio");
+    if (portfolioSection) portfolioSection.scrollIntoView();
+    if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true });
+  } else {
+    // Start the new animation sequence
+    playPreloaderAnimation();
+  }
 });
 
-// Horizontal Scroll (Desktop Only)
-if (window.innerWidth > 1024) {
-    const workSection = document.querySelector(".work-section");
-    const container = document.querySelector(".work-container");
-    
-    // Calculate total width to scroll
-    let sections = gsap.utils.toArray(".work-container > div");
-    
-    gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".work-section",
-            pin: true,
-            scrub: 1,
-            // Snap to sections roughly
-            // snap: 1 / (sections.length - 1),
-            end: () => "+=" + container.offsetWidth
-        }
-    });
-}
 
+const projectItems = document.querySelectorAll(".project-item");
+const imagePreview = document.getElementById("image-preview");
 
-// --- 4. CUSTOM CURSOR & MAGNETISM ---
+// Map project titles to their descriptions
+const projectDescriptions = {
+  "Name Card Design":
+    "A front & backname card design that i did for my graded assignment.",
+  "Chat Stickers Design":
+    "A chat stickers design that i did for my graded assignment.",
+  "Portfolio Website Design":
+    "A portfolio website design that i did for my graded assignment.",
+  "Grocery App UI":
+    "A Grocery App UI",
+   "Football Apparel App":
+    "A football apparel app done using mysql, node.js & express.",
+    "Football Quiz App":
+    "A football quiz app done using react native.",
+    "Cuisine Section List App":
+    "A cuisine section list app done using react native.",
+    "Recipe Manager App":
+    "A recipe manager app that calculates the total cooking time",
+    "Cat Breed Finder App":
+    "A cat breed finder App that allows users to search for and explore a variety of cat breeds",
+    "StyleShop App":
+    "An e-commerce ui design app",
+    "Travel List App":
+    "A travel list app done using react",
+};
 
-const cursorDot = document.querySelector("[data-cursor-dot]");
-const cursorOutline = document.querySelector("[data-cursor-outline]");
+projectItems.forEach((item) => {
+  item.addEventListener("mouseenter", (e) => {
+    const title = item.querySelector(".project-title").textContent.trim();
+    if (projectDescriptions[title]) {
+      imagePreview.textContent = projectDescriptions[title]; // Set the description text
+      imagePreview.style.display = "block"; // Show the preview
+    }
+  });
 
-window.addEventListener("mousemove", (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
+  item.addEventListener("mousemove", (e) => {
+    imagePreview.style.top = `${e.pageY + 10}px`;
+    imagePreview.style.left = `${e.pageX + 10}px`;
+  });
 
-    // Dot follows immediately
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-
-    // Outline follows with lag
-    cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
+  item.addEventListener("mouseleave", () => {
+    imagePreview.style.display = "none"; // Hide the preview when the mouse leaves
+  });
 });
 
-// Magnetic Buttons
-const magneticBtns = document.querySelectorAll(".magnetic-link, .magnetic-btn");
-magneticBtns.forEach(btn => {
-    btn.addEventListener("mousemove", (e) => {
-        const position = btn.getBoundingClientRect();
-        const x = e.clientX - position.left - position.width / 2;
-        const y = e.clientY - position.top - position.height / 2;
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".filter-button");
+  const projectItems = document.querySelectorAll(".project-item");
 
-        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
-        cursorOutline.style.width = "60px";
-        cursorOutline.style.height = "60px";
-        cursorOutline.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-    });
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove "active" class from all buttons
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      // Add "active" class to the clicked button
+      button.classList.add("active");
 
-    btn.addEventListener("mouseleave", () => {
-        btn.style.transform = "translate(0px, 0px)";
-        cursorOutline.style.width = "40px";
-        cursorOutline.style.height = "40px";
-        cursorOutline.style.backgroundColor = "transparent";
+      const filter = button.getAttribute("data-filter");
+
+      // Show/Hide project items based on the filter
+      projectItems.forEach((item) => {
+        if (filter === "all" || item.getAttribute("data-category") === filter) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("preloader"); // Adjust ID based on your preloader
+  if (window.location.hash === "#portfolio") {
+    // Skip preloader if navigating directly to #portfolio
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+    const portfolioSection = document.querySelector("#portfolio");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView();
+    }
+  }
+});
+
+const viewMoreButton = document.getElementById("view-more-button");
+const hiddenItems = document.querySelectorAll(".project-item.hidden");
+
+viewMoreButton.addEventListener("click", () => {
+  hiddenItems.forEach((item) => {
+    item.classList.toggle("hidden");
+  });
+
+  // Change button text based on state
+  if (viewMoreButton.textContent === "Show More") {
+    viewMoreButton.textContent = "Show Less";
+  } else {
+    viewMoreButton.textContent = "Show More";
+  }
 });
