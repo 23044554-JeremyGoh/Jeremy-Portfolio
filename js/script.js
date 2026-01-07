@@ -1,75 +1,69 @@
 // Preloader script
-const greetings = ["👋 Hello", "👋 你好", "👋 Selamat Datang", "👋 வணக்கம்"];
-
+const greetings = ["• Hello", "• Bonjour", "• Ciao", "• Ola", "• やあ", "• Hallå", "• مرحباً", "• Guten Tag", "• Hallo"];
 const preloader = document.querySelector(".preloader");
 const preloaderText = document.querySelector(".preloader-text");
-let currentIndex = 0;
-let totalGreetings = greetings.length;
 
-// Function to show the next greeting
-function showNextGreeting() {
-  // Fade out the current greeting before changing to the next one
-  preloaderText.classList.remove("fade-in");
-  preloaderText.classList.add("fade-out");
+function playPreloaderAnimation() {
+  let index = 0;
 
-  setTimeout(() => {
-    // Set the new greeting text
-    preloaderText.textContent = greetings[currentIndex];
-    preloaderText.classList.remove("fade-out");
+  // 1. Show the first greeting immediately
+  preloaderText.textContent = greetings[0];
+  
+  // Fade it in
+  requestAnimationFrame(() => {
     preloaderText.classList.add("fade-in");
+  });
 
-    // Move to the next greeting
-    currentIndex++;
+  // 2. Wait for the first word to sit there (1.2 seconds)
+  setTimeout(() => {
+    
+    // 3. Start the "Fast Forward" effect
+    // We update the text every 150ms without fading out
+    const interval = setInterval(() => {
+      index++;
 
-    // If we haven't reached the total greetings, continue the sequence
-    if (currentIndex < totalGreetings) {
-      setTimeout(showNextGreeting, 300); // Faster transition
-    } else {
-      // Ensure the last greeting stays visible briefly before preloader fades out
-      setTimeout(fadeOutPreloader, 600); 
-    }
-  }, 150); // Shorter fade-out time
+      // If we have greetings left to show
+      if (index < greetings.length) {
+        preloaderText.textContent = greetings[index];
+      } else {
+        // Stop the cycle and slide up
+        clearInterval(interval);
+        slideUpPreloader();
+      }
+    }, 150); // Speed of the fast forward (lower number = faster)
+
+  }, 1200); // Duration the first "Hello" stays visible
 }
 
-// Function to fade out and hide the preloader
-function fadeOutPreloader() {
-  preloader.style.opacity = "0";
+function slideUpPreloader() {
+  preloader.classList.add("slide-up");
 
-  // After fade out is complete, hide preloader
+  // Initialize AOS
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ duration: 800, once: true });
+      AOS.refresh();
+    }
+  }, 200);
+
+  // Remove from display after animation
   setTimeout(() => {
     preloader.style.display = "none";
-
-    // Initialize AOS after the preloader disappears
-    AOS.init({
-      duration: 800, // Faster animations
-      once: true, 
-    });
-    AOS.refresh(); 
-  }, 300); // Faster preloader disappearance
+  }, 900);
 }
 
-// Check if the preloader should be skipped
+// Initial Load Logic
 window.addEventListener("load", () => {
   const urlHash = window.location.hash;
 
   if (urlHash === "#portfolio") {
-    // Skip preloader and directly scroll to the #portfolio section
     preloader.style.display = "none";
-
     const portfolioSection = document.querySelector("#portfolio");
-    if (portfolioSection) {
-      portfolioSection.scrollIntoView();
-    }
-
-    // Initialize AOS immediately
-    AOS.init({
-      duration: 800, // Faster animations
-      once: true,
-    });
-    AOS.refresh();
+    if (portfolioSection) portfolioSection.scrollIntoView();
+    if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true });
   } else {
-    // Start the preloader sequence
-    showNextGreeting();
+    // Start the new animation sequence
+    playPreloaderAnimation();
   }
 });
 
