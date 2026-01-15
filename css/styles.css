@@ -42,7 +42,7 @@ body {
   padding: 0;
   background-color: #000;
   font-family: "Figtree", serif;
-  color: #A3A3A3;
+  color: #A8A29E;
   text-transform: lowercase;
 }
 
@@ -335,8 +335,9 @@ nav a {
 .description-box p {
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Figtree", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0; /* Remove extra margin for cleaner alignment */
+  font-style: 500;
 }
 
 .profile-photo-container {
@@ -366,9 +367,10 @@ nav a {
 }
 
 .vertical-title span {
-  font-size: 20px;
-  color: #e4ded7;
-  font-family: "Suranna", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+   font-family: "Inter", sans-serif;
 }
 
 @media (max-width: 768px) {

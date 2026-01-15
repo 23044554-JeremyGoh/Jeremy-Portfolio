@@ -170,3 +170,4 @@ viewMoreButton.addEventListener("click", () => {
     viewMoreButton.textContent = "Show More";
   }
 });
+
