@@ -3,7 +3,7 @@ html {
 }
 
 .preloader-text {
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   font-family: "Figtree", sans-serif;
   font-size: 1.7rem;
   font-weight: 500;
@@ -245,7 +245,7 @@ section {
   margin: 0;
   line-height: 1.1;
   margin-left: -25px; 
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   text-transform: none;
 }
 
@@ -291,7 +291,7 @@ nav li {
 }
 
 nav a {
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   text-decoration: none;
   font-family: "Figtree", sans-serif;
   font-size: 14px;
@@ -338,6 +338,7 @@ nav a {
   font-family: "Inter", sans-serif;
   margin: 0; /* Remove extra margin for cleaner alignment */
   font-style: 500;
+  color: oklch(0.869 0.005 56.366);
 }
 
 .profile-photo-container {
@@ -363,7 +364,7 @@ nav a {
 .vertical-title .line {
   width: 40px;
   height: 2px;
-  background-color: #e4ded7;
+  background-color: oklch(0.869 0.005 56.366);
 }
 
 .vertical-title span {
@@ -545,25 +546,21 @@ nav a {
 
 
 
+
 /* Portfolio Section Styling */
-#portfolio { 
+#portfolio {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 20px;
   margin: 0 auto;
   max-width: 1200px;
- padding-top: 100px;
+  padding-top: 100px;
 }
 
 .project-item a {
-  text-decoration: none !important; /* Ensure the link has no underline */
-  color: inherit !important; /* Inherit color from parent */
-}
-
-.project-content {
-  display: block; /* Ensure it's a block-level element */
-  align-items: left;
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-item {
@@ -578,17 +575,16 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  min-height: 120px;
 }
 
 .project-info {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 16px;
 }
 
 .project-number {
-  
   font-weight: 300;
   font-size: 2rem;
   color: #b0b0b0;
@@ -597,15 +593,13 @@ nav a {
 }
 
 .project-title {
-  
   font-size: 1.5rem;
   font-weight: 400;
   transition: color 0.3s ease, margin-left 0.3s ease;
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
 }
 
 .project-description {
-  
   font-weight: 300;
   font-size: 1rem;
   color: #b0b0b0;
@@ -615,7 +609,7 @@ nav a {
 
 .divider {
   width: 100%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3a3a3a;
   transition: border-color 0.3s ease;
 }
 
@@ -623,7 +617,7 @@ nav a {
 .project-item:hover .project-number,
 .project-item:hover .project-title,
 .project-item:hover .project-description {
-  color: #7d7d7d; /* Gray on hover */
+  color: #7d7d7d;
 }
 
 .project-item:hover .project-title {
@@ -635,29 +629,15 @@ nav a {
 }
 
 .project-item:hover .divider {
-  border-color: #b0b0b0; /* Darker gray border on hover */
+  border-color: #b0b0b0;
 }
 
-/* Tooltip-style rounded rectangle for preview */
-#image-preview {
-  position: absolute;
-  padding: 10px 20px;
-  background-color: #e4ded7; /* Dark background for text */
-  color: black;
-  font-size: 1rem;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-  z-index: 1000;
-  display: none; /* Initially hidden */
-}
-
-
+/* Filter Buttons */
 .filter {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 20px 0;
+  margin: 20px 0 30px;
 }
 
 .filter-button {
@@ -666,7 +646,7 @@ nav a {
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   background-color: #1f1f1f;
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   border: 2px solid transparent;
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
@@ -675,7 +655,7 @@ nav a {
 }
 
 .filter-button:hover {
-  background-color: #e4ded7;
+  background-color: oklch(0.869 0.005 56.366);
   color: #000;
   border: 2px solid #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -683,14 +663,16 @@ nav a {
 }
 
 .filter-button.active {
-  background-color: #e4ded7;
+  background-color: oklch(0.869 0.005 56.366);
   color: #000;
   border: 2px solid #fff;
 }
 
-
-.hidden {
-  display: none;
+/* Show More button wrapper */
+.portfolio-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 #view-more-button {
@@ -699,7 +681,7 @@ nav a {
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   background-color: #1f1f1f;
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   border: 2px solid transparent;
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
@@ -708,17 +690,25 @@ nav a {
 }
 
 #view-more-button:hover {
-  background-color: #e4ded7;
+  background-color: oklch(0.869 0.005 56.366);
   color: #000;
   border: 2px solid #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
-#view-more-button.active {
-  background-color: #e4ded7;
+/* Tooltip-style preview */
+#image-preview {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: oklch(0.869 0.005 56.366);
   color: #000;
-  border: 2px solid #fff;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
 }
 
 /* Contact Section */
@@ -761,7 +751,7 @@ nav a {
 .contact-item h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
 }
 
 .contact-item a {
@@ -789,10 +779,10 @@ nav a {
 .form-group input,
 .form-group textarea {
   padding: 12px;
-  border: 1px solid #e4ded7;
+  border: 1px solid oklch(0.869 0.005 56.366);
   border-radius: 8px;
   background: transparent;
-  color: #e4ded7;
+  color: oklch(0.869 0.005 56.366);
   font-size: 1rem;
   font-family: inherit;
   gap: 20px;
@@ -812,8 +802,8 @@ nav a {
 .submit-btn {
   padding: 12px 24px;
   background: transparent;
-  border: 1px solid #e4ded7;
-  color: #e4ded7;
+  border: 1px solid oklch(0.869 0.005 56.366);
+  color: oklch(0.869 0.005 56.366);
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -821,7 +811,7 @@ nav a {
 }
 
 .submit-btn:hover {
-  background: #e4ded7;
+  background: oklch(0.869 0.005 56.366);
   color: #0D0D0D;
 }
 
@@ -970,7 +960,7 @@ nav a {
   .logos p {
     font-size: 24px;
     font-weight: bold;
-    color: #e4e4e4;
+    color: #fafaf9;
     text-transform: none;
     margin-left: 45px
   }
