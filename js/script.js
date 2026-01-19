@@ -76,7 +76,7 @@ const projectDescriptions = {
   "Recipe Manager App": "React Native app that manages recipes and calculates total cooking time.",
   "Cat Breed Finder App": "React Native app for exploring different cat breeds with details.",
   "Travel List App": "React app to manage travel packing lists and trip items.",
-  "Laptop Inventory App": "React prototype to replace Excel-based laptop tracking."
+  "Laptop Inventory App": "A prototype laptop inventory system to replace Excel-based laptop tracking."
 };
 
 projectItems.forEach(item => {
