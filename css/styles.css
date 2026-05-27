@@ -7,9 +7,9 @@ html {
   font-family: "Figtree", sans-serif;
   font-size: 1.7rem;
   font-weight: 500;
-  opacity: 0; 
+  opacity: 0;
   /* Only animate opacity. Text swaps will happen instantly because they don't affect opacity. */
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 
 .preloader-text.fade-in {
@@ -67,21 +67,21 @@ body {
 
 .scroll-down {
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transform: translateY(-90px);
 }
 
 .scroll-down p {
   text-align: center;
-  margin-bottom: 10px; 
-  font-size: 16px; 
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .mouse {
-  width: 20px; 
-  height: 40px; 
+  width: 20px;
+  height: 40px;
   border: 2px solid #fff;
   border-radius: 20px;
   display: flex;
@@ -99,11 +99,12 @@ body {
   animation: move-wheel 1s linear infinite;
 }
 
-@keyframes move-wheel{
+@keyframes move-wheel {
   0% {
     opacity: 0;
     transform: translateY(-1rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(1rem);
@@ -124,7 +125,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: -70px; 
+  margin-left: -70px;
 }
 
 .example-2 {
@@ -132,10 +133,12 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
 .example-2 .icon-content {
   margin: 0 10px;
   position: relative;
 }
+
 .example-2 .icon-content .tooltip {
   position: absolute;
   bottom: -30px;
@@ -150,11 +153,13 @@ ul {
   font-size: 14px;
   transition: all 0.3s ease;
 }
+
 .example-2 .icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
   bottom: -40px;
 }
+
 .example-2 .icon-content a {
   position: relative;
   overflow: hidden;
@@ -168,18 +173,22 @@ ul {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
 }
+
 .example-2 .icon-content a svg {
   position: relative;
   z-index: 1;
   width: 30px;
   height: 30px;
 }
+
 .example-2 .icon-content a:hover {
   color: white;
 }
+
 .example-2 .icon-content a .filled {
   position: absolute;
   top: auto;
@@ -190,26 +199,31 @@ ul {
   background-color: #000;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
+
 .example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background-color: #E4405F; 
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+  background-color: #E4405F;
 }
+
 .example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: #181717; 
+.example-2 .icon-content a[data-social="github"]~.tooltip {
+  background-color: #181717;
 }
+
 .example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0A66C2; 
+.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
+  background-color: #0A66C2;
 }
 
 
 
 section {
-  padding-top: clamp(50px, 10vh, 100px); /* Adjust padding based on viewport height */
+  padding-top: clamp(50px, 10vh, 100px);
+  /* Adjust padding based on viewport height */
   padding-bottom: clamp(50px, 10vh, 100px);
 }
 
@@ -227,14 +241,14 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  text-align: left; 
+  text-align: left;
 }
 
 
@@ -244,7 +258,7 @@ section {
   font-family: "Figtree", sans-serif;
   margin: 0;
   line-height: 1.1;
-  margin-left: -25px; 
+  margin-left: -25px;
   color: oklch(0.869 0.005 56.366);
   text-transform: none;
 }
@@ -283,7 +297,7 @@ nav ul {
   margin: 0;
   display: flex;
   gap: 20px;
-  
+
 }
 
 nav li {
@@ -298,7 +312,7 @@ nav a {
   font-weight: 600;
   letter-spacing: .025em;
 }
- 
+
 
 
 
@@ -314,14 +328,17 @@ nav a {
   align-items: center;
   gap: 50px;
   padding: 80px 20px;
-  margin: 0 auto; /* Center the section */
-  max-width: 1200px; /* Same as Tech Stack's width */
+  margin: 0 auto;
+  /* Center the section */
+  max-width: 1200px;
+  /* Same as Tech Stack's width */
 }
 
 .bio-container {
   display: flex;
   flex: 1;
-  gap: 70px; /* Reduced for alignment consistency */
+  gap: 70px;
+  /* Reduced for alignment consistency */
   flex-wrap: wrap;
   align-items: center;
 }
@@ -329,14 +346,16 @@ nav a {
 .description-box {
   flex: 1;
   max-width: 600px;
-  padding-left: 20px; /* Align with Tech Stack spacing */
+  padding-left: 20px;
+  /* Align with Tech Stack spacing */
 }
 
 .description-box p {
   font-size: 14px;
   line-height: 1.6;
   font-family: "Inter", sans-serif;
-  margin: 0; /* Remove extra margin for cleaner alignment */
+  margin: 0;
+  /* Remove extra margin for cleaner alignment */
   font-style: 500;
   color: oklch(0.869 0.005 56.366);
 }
@@ -371,7 +390,7 @@ nav a {
   font-size: 16px;
   font-weight: 600;
   color: white;
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -398,9 +417,12 @@ nav a {
 /* Technologies grid */
 #tech-stack {
   display: flex;
-  flex-direction: column; /* Stack the title and grid vertically */
-  gap: 10px; /* Maintain spacing between the title and grid */
-  margin: 30px auto; /* Center the section horizontally */
+  flex-direction: column;
+  /* Stack the title and grid vertically */
+  gap: 10px;
+  /* Maintain spacing between the title and grid */
+  margin: 30px auto;
+  /* Center the section horizontally */
   max-width: 1200px;
 }
 
@@ -424,10 +446,12 @@ nav a {
   align-items: center;
   gap: 1rem;
   padding: 12px;
-  border: 2px solid rgba(0, 0, 0, 0); /* Transparent border */
+  border: 2px solid rgba(0, 0, 0, 0);
+  /* Transparent border */
   border-radius: 12px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(0px); /* No blur initially */
+  backdrop-filter: blur(0px);
+  /* No blur initially */
 }
 
 
@@ -438,9 +462,11 @@ nav a {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 65px; /* Icon container size */
+  width: 65px;
+  /* Icon container size */
   height: 65px;
-  border-radius: 8px; /* Rounded border */
+  border-radius: 8px;
+  /* Rounded border */
   border: 1px solid #262626;
   background-color: transparent;
   transition: all 0.3s ease;
@@ -449,13 +475,17 @@ nav a {
 .tech-icon::before {
   content: '';
   position: absolute;
-  top: 10%; /* Adjust for a smaller background */
+  top: 10%;
+  /* Adjust for a smaller background */
   left: 10%;
-  width: 80%; /* Smaller than the icon container */
+  width: 80%;
+  /* Smaller than the icon container */
   height: 80%;
   border-radius: 8px;
-  background-color: var(--icon-bg-color, rgba(0, 0, 0, 0.1)); /* Default color if not specified */
-  z-index: -1; /* Place behind the icon */
+  background-color: var(--icon-bg-color, rgba(0, 0, 0, 0.1));
+  /* Default color if not specified */
+  z-index: -1;
+  /* Place behind the icon */
   transition: all 0.3s ease;
 }
 
@@ -487,43 +517,53 @@ nav a {
 
 /* Add custom colors for each icon */
 .tech-icon.python::before {
-  background-color: rgba(52, 101, 164, 0.3); /* Python blue */
+  background-color: rgba(52, 101, 164, 0.3);
+  /* Python blue */
 }
 
 .tech-icon.html5::before {
-  background-color: rgba(227, 79, 38, 0.3); /* HTML5 orange */
+  background-color: rgba(227, 79, 38, 0.3);
+  /* HTML5 orange */
 }
 
 .tech-icon.css::before {
-  background-color: rgba(38, 77, 228, 0.3); /* CSS blue */
+  background-color: rgba(38, 77, 228, 0.3);
+  /* CSS blue */
 }
 
 .tech-icon.javascript::before {
-  background-color: rgba(240, 219, 79, 0.3); /* JavaScript yellow */
+  background-color: rgba(240, 219, 79, 0.3);
+  /* JavaScript yellow */
 }
 
 .tech-icon.nodejs::before {
-  background-color: rgba(78, 142, 49, 0.3); /* Node.js green */
+  background-color: rgba(78, 142, 49, 0.3);
+  /* Node.js green */
 }
 
 .tech-icon.react::before {
-  background-color: rgba(97, 218, 251, 0.3); /* React cyan */
+  background-color: rgba(97, 218, 251, 0.3);
+  /* React cyan */
 }
 
 .tech-icon.photoshop::before {
-  background-color: rgba(44, 62, 80, 0.3); /* Photoshop blue-gray */
+  background-color: rgba(44, 62, 80, 0.3);
+  /* Photoshop blue-gray */
 }
 
 .tech-icon.illustrator::before {
-  background-color: rgba(255, 102, 0, 0.3); /* Illustrator orange */
+  background-color: rgba(255, 102, 0, 0.3);
+  /* Illustrator orange */
 }
 
 .tech-icon.figma::before {
-  background-color: rgba(0, 204, 153, 0.3); /* Figma green */
+  background-color: rgba(0, 204, 153, 0.3);
+  /* Figma green */
 }
 
 .tech-icon.mysql::before {
-  background-color: rgba(0, 117, 143, 0.3); /* MySQL teal */
+  background-color: rgba(0, 117, 143, 0.3);
+  /* MySQL teal */
 }
 
 
@@ -823,19 +863,23 @@ nav a {
 /* Additional Media Query for 1900px x 1200px */
 @media (min-width: 1900px) and (min-height: 1200px) {
   .logo {
-    left: 900px; /* Ensure the logo stays in the same relative position */
+    left: 900px;
+    /* Ensure the logo stays in the same relative position */
   }
 
   .navbar {
-    right: 1425px; /* Maintain original navbar positioning */
+    right: 1425px;
+    /* Maintain original navbar positioning */
   }
 
   .hero {
-    padding: 50px 150px; /* Keep padding consistent with the design */
+    padding: 50px 150px;
+    /* Keep padding consistent with the design */
   }
 
   .home-name {
-    font-size: 72px; /* Preserve original font size */
+    font-size: 72px;
+    /* Preserve original font size */
     margin-left: -25px;
   }
 
@@ -845,30 +889,37 @@ nav a {
   }
 
   .about-section {
-    gap: 50px; /* Maintain spacing between elements */
+    gap: 50px;
+    /* Maintain spacing between elements */
     padding: 80px 20px;
-    max-width: 1200px; /* Restrict width to prevent overflow */
+    max-width: 1200px;
+    /* Restrict width to prevent overflow */
   }
 
   .profile-photo-container img {
-    max-width: 80%; /* Ensure consistent image scaling */
+    max-width: 80%;
+    /* Ensure consistent image scaling */
   }
 
   .technologies-grid {
-    grid-template-columns: repeat(4, 1fr); /* Fixed columns for wide screens */
+    grid-template-columns: repeat(4, 1fr);
+    /* Fixed columns for wide screens */
   }
 
   .project-item {
-    flex-direction: column; /* Keep project items vertically aligned */
+    flex-direction: column;
+    /* Keep project items vertically aligned */
   }
 
   .project-content {
-    height: 200px; /* Preserve the original project card height */
+    height: 200px;
+    /* Preserve the original project card height */
   }
 
   #contact {
     padding: 100px 20px;
-    max-width: 1200px; /* Restrict contact section width */
+    max-width: 1200px;
+    /* Restrict contact section width */
   }
 }
 
@@ -879,39 +930,45 @@ nav a {
 
 
 
-@media (max-width:1300px){
-  .technologies-grid{
+@media (max-width:1300px) {
+  .technologies-grid {
     max-width: 100% !important;
   }
-  #portfolio{
+
+  #portfolio {
     max-width: 92% !important;
   }
-  .project-item a{
+
+  .project-item a {
     padding: 20px !important;
   }
-  #tech-stack .vertical-title{
-     margin-left: 20px !important;
-  }
-  #portfolio .vertical-title{
-    margin-left: 40px !important;
- }
-  #tech-stack .tech-subheading{
+
+  #tech-stack .vertical-title {
     margin-left: 20px !important;
- }
+  }
+
+  #portfolio .vertical-title {
+    margin-left: 40px !important;
+  }
+
+  #tech-stack .tech-subheading {
+    margin-left: 20px !important;
+  }
 }
-.tech-card{
+
+.tech-card {
   justify-content: center;
 }
 
-@media (max-width:1024px)
-{
-  .hero{
+@media (max-width:1024px) {
+  .hero {
     padding: 50px !important;
   }
- 
-  
+
+
 }
-.profile-photo-container{
+
+.profile-photo-container {
   max-width: 100% !important;
 }
 
@@ -930,118 +987,137 @@ nav a {
 
 
 
-@media (max-width:416px){
-  .technologies-grid{
+@media (max-width:416px) {
+  .technologies-grid {
 
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
-  /* Navbar Styles */
-  .navbars {
-    position: fixed; /* Fix the navbar to the top */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    background-color: transparent; /* Background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    z-index: 1000; /* Keep navbar above other elements */
-  }
 
-  .navbars .container {
-    max-width: 1200px; /* Set max width */
-    margin: 0 auto; /* Center the container */
-    display: flex; /* Flex layout for alignment */
-    justify-content: space-between; /* Space between logo and links */
-    align-items: center; /* Vertically center content */
-    padding: 10px 20px; /* Add some padding */
-    flex-direction: row;
-  }
+/* Navbar Styles */
+.navbars {
+  position: fixed;
+  /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Full width */
+  background-color: transparent;
+  /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Optional shadow */
+  z-index: 1000;
+  /* Keep navbar above other elements */
+}
 
-  .logos p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fafaf9;
-    text-transform: none;
-    margin-left: 45px
-  }
+.navbars .container {
+  max-width: 1200px;
+  /* Set max width */
+  margin: 0 auto;
+  /* Center the container */
+  display: flex;
+  /* Flex layout for alignment */
+  justify-content: space-between;
+  /* Space between logo and links */
+  align-items: center;
+  /* Vertically center content */
+  padding: 10px 20px;
+  /* Add some padding */
+  flex-direction: row;
+}
 
+.logos p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fafaf9;
+  text-transform: none;
+  margin-left: 45px
+}
+
+.uli {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  /* Space between links */
+}
+
+.uli li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #e4e4e4;
+  transition: color 0.3s ease;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  /* Hidden by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hide the menu initially for mobile */
+.uli.mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.uli.mobile li {
+  margin-bottom: 10px;
+}
+
+.uli.mobile li:last-child {
+  margin-bottom: 0;
+}
+
+/* Show links when menu is open */
+.uli.mobile.open {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .uli {
-    list-style: none;
+    display: none;
+    /* Hide links on smaller screens */
+  }
+
+  .hamburger {
     display: flex;
-    gap: 20px; /* Space between links */
+    /* Show hamburger menu on mobile */
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .uli li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #e4e4e4;
-    transition: color 0.3s ease;
+    color: #333 !important;
   }
 
-  
-  /* Hamburger Menu */
-  .hamburger {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    gap: 5px;
-  }
-
-  .hamburger span {
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  /* Hide the menu initially for mobile */
   .uli.mobile {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px 20px;
+    width: 80% !important;
+    top: 70px !important;
   }
-
-  .uli.mobile li {
-    margin-bottom: 10px;
-  }
-
-  .uli.mobile li:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Show links when menu is open */
-  .uli.mobile.open {
-    display: flex;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .uli {
-      display: none; /* Hide links on smaller screens */
-    }
-
-    .hamburger {
-      display: flex; /* Show hamburger menu on mobile */
-    }
-    body{
-      overflow-x: hidden;
-    }
-    .uli li a {
-color:#333 !important;
-    }
-    .uli.mobile{
-      width: 80% !important;
-      top: 70px !important;
-    }
-  }
+}
