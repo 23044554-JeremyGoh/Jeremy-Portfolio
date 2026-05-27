@@ -129,7 +129,7 @@ button:hover {
 
 .video-container video {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
